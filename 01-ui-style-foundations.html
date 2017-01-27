@@ -1,0 +1,3879 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="IE=8;IE=9;IE=edge" http-equiv="x-ua-compatible">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+
+	<title>UI Style Foundations | TI pattern library</title>
+
+	<link rel="stylesheet" href="assets/fabricator/styles/f.css">
+	
+	<!-- vendor scripts -->
+		<script src="http://www.ti.com/assets/en/js/homepage/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--/vendor scripts-->
+	
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
+	<!-- /toolkit styles -->
+
+</head>
+
+<body>
+
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="f-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="f-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="f-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="f-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="f-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+			<symbol id="f-icon-tag" viewBox="0 0 512 512">
+				<path d="M271.045,74.159h-154.86v154.75l190.84,190.953L462,264.892L271.045,74.159z M216.323,170.315
+			c-12.492,12.492-32.749,12.492-45.239,0c-12.491-12.492-12.491-32.748,0-45.238c12.49-12.494,32.747-12.494,45.239,0
+			C228.818,137.567,228.818,157.823,216.323,170.315z M256,411.136l-26.704,26.705L50,258.571V118.72h36.164v122.619L256,411.136z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!--[if gt IE 7]><!-->
+		
+		<!-- fabricator menu -->
+		
+		
+		<div class="f-menu" id="f-main-menu">
+			<div class="f-controls">
+				<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#f-icon-labels" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#f-icon-notes" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#f-icon-code" />
+					</svg>
+				</div>
+				<!--
+			    <div id= "f-control-tag" class="f-control f-global-control" data-f-toggle-control="tags" title="Toggle Tags">
+					<svg>
+						<use xlink:href="#f-icon-tag" />
+					</svg>
+				</div> -->
+			</div>
+			<ul>
+				<li>
+					<span><a href="index.html" class="f-menu__heading">Overview</a>
+					</span>
+				</li>
+				<li>
+						<a href="01-ui-style-foundations.html" class="f-menu__heading">01 Ui Style Foundations</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="01-ui-style-foundations.html#!placeholder">Placeholder </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="01-ui-style-foundations.html#01-brand-alignment-visual-tone">01 Brand Alignment Visual Tone </a>
+										<div id="arrow-01-brand-alignment-visual-tone"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-01-brand-alignment-visual-tone.placeholder"></span><a href="01-ui-style-foundations.html#01-brand-alignment-visual-tone.placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="01-ui-style-foundations.html#02-multi-screen-design-principles">02 Multi Screen Design Principles </a>
+										<div id="arrow-02-multi-screen-design-principles"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-02-multi-screen-design-principles.!overview"></span><a href="01-ui-style-foundations.html#02-multi-screen-design-principles.!overview">Overview</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="01-ui-style-foundations.html#03-touch-friendly-design">03 Touch Friendly Design </a>
+										<div id="arrow-03-touch-friendly-design"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-03-touch-friendly-design.!overview"></span><a href="01-ui-style-foundations.html#03-touch-friendly-design.!overview">Overview</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="01-ui-style-foundations.html#04-colour">04 Colour </a>
+										<div id="arrow-04-colour"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-04-colour.color-palette"></span><a href="01-ui-style-foundations.html#04-colour.color-palette">Color Palette</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="01-ui-style-foundations.html#05-typography-fundamentals">05 Typography Fundamentals </a>
+										<div id="arrow-05-typography-fundamentals"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-05-typography-fundamentals.Brand-fonts"></span><a href="01-ui-style-foundations.html#05-typography-fundamentals.Brand-fonts">Brand Fonts</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-05-typography-fundamentals.Icon-fonts"></span><a href="01-ui-style-foundations.html#05-typography-fundamentals.Icon-fonts">Icon Fonts</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-05-typography-fundamentals.Web-fonts"></span><a href="01-ui-style-foundations.html#05-typography-fundamentals.Web-fonts">Web Fonts</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-05-typography-fundamentals.line-length"></span><a href="01-ui-style-foundations.html#05-typography-fundamentals.line-length">Line Length</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="01-ui-style-foundations.html#06-layout">06 Layout </a>
+										<div id="arrow-06-layout"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-06-layout.!overview"></span><a href="01-ui-style-foundations.html#06-layout.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-06-layout.the-grid"></span><a href="01-ui-style-foundations.html#06-layout.the-grid">The Grid</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="01-ui-style-foundations.html#07-images-and-graphics">07 Images And Graphics </a>
+										<div id="arrow-07-images-and-graphics"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-07-images-and-graphics.placeholder"></span><a href="01-ui-style-foundations.html#07-images-and-graphics.placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="01-ui-style-foundations.html#08-motion">08 Motion </a>
+										<div id="arrow-08-motion"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-08-motion.placeholder"></span><a href="01-ui-style-foundations.html#08-motion.placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+					</ul>
+				</li>
+				<li>
+						<a href="02-ui-code-foundations.html" class="f-menu__heading">02 Ui Code Foundations</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="02-ui-code-foundations.html#01-ui-design-checklist">01 Ui Design Checklist </a>
+								</span>
+								
+								
+						 </ul>
+					</ul>
+				</li>
+				<li>
+						<a href="03-imagery.html" class="f-menu__heading">03 Imagery</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#!placeholder">Placeholder </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#equations">Equations </a>
+										<div id="arrow-equations"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-equations.!placeholder"></span><a href="03-imagery.html#equations.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#file-formats">File Formats </a>
+										<div id="arrow-file-formats"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-file-formats.!placeholder"></span><a href="03-imagery.html#file-formats.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#graphic-specifications">Graphic Specifications </a>
+										<div id="arrow-graphic-specifications"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-graphic-specifications.image-standards"></span><a href="03-imagery.html#graphic-specifications.image-standards">Image Standards</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-graphic-specifications.recreate-smaller-images-in-the-new-dimensions"></span><a href="03-imagery.html#graphic-specifications.recreate-smaller-images-in-the-new-dimensions">Recreate Smaller Images In The New Dimensions</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#icons">Icons </a>
+										<div id="arrow-icons"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-icons.!placeholder"></span><a href="03-imagery.html#icons.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#image-templates">Image Templates </a>
+										<div id="arrow-image-templates"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.!overview"></span><a href="03-imagery.html#image-templates.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.01-standard-large_image"></span><a href="03-imagery.html#image-templates.01-standard-large_image">01 Standard Large Image</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.02-standard-feature-box-image"></span><a href="03-imagery.html#image-templates.02-standard-feature-box-image">02 Standard Feature Box Image</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.03-awkward-shaped-images"></span><a href="03-imagery.html#image-templates.03-awkward-shaped-images">03 Awkward Shaped Images</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.04-chip-shot"></span><a href="03-imagery.html#image-templates.04-chip-shot">04 Chip Shot</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.05-collage"></span><a href="03-imagery.html#image-templates.05-collage">05 Collage</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.06-border-to-border-image"></span><a href="03-imagery.html#image-templates.06-border-to-border-image">06 Border To Border Image</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.07-PDF-cover"></span><a href="03-imagery.html#image-templates.07-PDF-cover">07 Pdf Cover</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.08-layered-screenshots"></span><a href="03-imagery.html#image-templates.08-layered-screenshots">08 Layered Screenshots</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-image-templates.09-collage-imagery-on-a-transparent-background"></span><a href="03-imagery.html#image-templates.09-collage-imagery-on-a-transparent-background">09 Collage Imagery On A Transparent Background</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#marketing-imagery">Marketing Imagery </a>
+										<div id="arrow-marketing-imagery"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-marketing-imagery.!placeholder"></span><a href="03-imagery.html#marketing-imagery.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#naming-convention">Naming Convention </a>
+										<div id="arrow-naming-convention"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-naming-convention.!overview"></span><a href="03-imagery.html#naming-convention.!overview">Overview</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#optimization-tools">Optimization Tools </a>
+										<div id="arrow-optimization-tools"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-optimization-tools.!placeholder"></span><a href="03-imagery.html#optimization-tools.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#size-specifications">Size Specifications </a>
+										<div id="arrow-size-specifications"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-size-specifications.$overview"></span><a href="03-imagery.html#size-specifications.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-size-specifications.email-images"></span><a href="03-imagery.html#size-specifications.email-images">Email Images</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-size-specifications.ticom-c1-to-c4-non-transparent"></span><a href="03-imagery.html#size-specifications.ticom-c1-to-c4-non-transparent">Ticom C 1 To C 4 Non Transparent</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-size-specifications.ticom-c1-to-c4-transparent-line-art"></span><a href="03-imagery.html#size-specifications.ticom-c1-to-c4-transparent-line-art">Ticom C 1 To C 4 Transparent Line Art</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-size-specifications.ticom-c1-to-c6-semi-transparent"></span><a href="03-imagery.html#size-specifications.ticom-c1-to-c6-semi-transparent">Ticom C 1 To C 6 Semi Transparent</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-size-specifications.ticom-c5-to-c6-non-transparent"></span><a href="03-imagery.html#size-specifications.ticom-c5-to-c6-non-transparent">Ticom C 5 To C 6 Non Transparent</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-size-specifications.ticom-c7-or-larger"></span><a href="03-imagery.html#size-specifications.ticom-c7-or-larger">Ticom C 7 Or Larger</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-size-specifications.ticom-enlarged-images"></span><a href="03-imagery.html#size-specifications.ticom-enlarged-images">Ticom Enlarged Images</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-size-specifications.ticom-get-help-with-export-problems"></span><a href="03-imagery.html#size-specifications.ticom-get-help-with-export-problems">Ticom Get Help With Export Problems</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#sources">Sources </a>
+										<div id="arrow-sources"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sources.!placeholder"></span><a href="03-imagery.html#sources.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#sub-brands">Sub Brands </a>
+										<div id="arrow-sub-brands"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-brands.!placeholder"></span><a href="03-imagery.html#sub-brands.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="03-imagery.html#technical-imagery">Technical Imagery </a>
+										<div id="arrow-technical-imagery"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-technical-imagery.!placeholder"></span><a href="03-imagery.html#technical-imagery.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+					</ul>
+				</li>
+				<li>
+						<a href="04-using-this-library.html" class="f-menu__heading">04 Using This Library</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="04-using-this-library.html#01-getting-started-with-fabricator">01 Getting Started With Fabricator </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="04-using-this-library.html#02-pattern-approval-and-bug-submissions">02 Pattern Approval And Bug Submissions </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="04-using-this-library.html#03-updating-pattern-status">03 Updating Pattern Status </a>
+								</span>
+								
+								
+						 </ul>
+					</ul>
+				</li>
+				<li>
+						<a href="05-elements.html" class="f-menu__heading">05 Elements</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#!overview">Overview </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#buttons">Buttons </a>
+										<div id="arrow-buttons"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.!overview"></span><a href="05-elements.html#buttons.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.01-primary-button"></span><a href="05-elements.html#buttons.01-primary-button">01 Primary Button</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.02-secondary-button"></span><a href="05-elements.html#buttons.02-secondary-button">02 Secondary Button</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.03-tertiary-button"></span><a href="05-elements.html#buttons.03-tertiary-button">03 Tertiary Button</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.04-clear-button-style"></span><a href="05-elements.html#buttons.04-clear-button-style">04 Clear Button Style</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.05-disabled-button"></span><a href="05-elements.html#buttons.05-disabled-button">05 Disabled Button</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.06-large-button"></span><a href="05-elements.html#buttons.06-large-button">06 Large Button</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.07-download-buttons"></span><a href="05-elements.html#buttons.07-download-buttons">07 Download Buttons</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.08-enlarge-button"></span><a href="05-elements.html#buttons.08-enlarge-button">08 Enlarge Button</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.09-labels"></span><a href="05-elements.html#buttons.09-labels">09 Labels</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-buttons.filter"></span><a href="05-elements.html#buttons.filter">Filter</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#call-to-actions">Call To Actions </a>
+										<div id="arrow-call-to-actions"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-call-to-actions.!overview"></span><a href="05-elements.html#call-to-actions.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-call-to-actions.01-basic-cta-link"></span><a href="05-elements.html#call-to-actions.01-basic-cta-link">01 Basic Cta Link</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-call-to-actions.02-cta-button"></span><a href="05-elements.html#call-to-actions.02-cta-button">02 Cta Button</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-call-to-actions.03-special"></span><a href="05-elements.html#call-to-actions.03-special">03 Special</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#circle-number-instructions">Circle Number Instructions </a>
+										<div id="arrow-circle-number-instructions"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-circle-number-instructions.!overview"></span><a href="05-elements.html#circle-number-instructions.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-circle-number-instructions.step-numbers"></span><a href="05-elements.html#circle-number-instructions.step-numbers">Step Numbers</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#dividers-and-lines">Dividers And Lines </a>
+										<div id="arrow-dividers-and-lines"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-dividers-and-lines.full-pixel-border-line"></span><a href="05-elements.html#dividers-and-lines.full-pixel-border-line">Full Pixel Border Line</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-dividers-and-lines.horiz-primary-subject-divider"></span><a href="05-elements.html#dividers-and-lines.horiz-primary-subject-divider">Horiz Primary Subject Divider</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-dividers-and-lines.horiz-secondary-subject-divider"></span><a href="05-elements.html#dividers-and-lines.horiz-secondary-subject-divider">Horiz Secondary Subject Divider</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-dividers-and-lines.horiz-top-bar"></span><a href="05-elements.html#dividers-and-lines.horiz-top-bar">Horiz Top Bar</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-dividers-and-lines.vertical-dividers"></span><a href="05-elements.html#dividers-and-lines.vertical-dividers">Vertical Dividers</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#form-elements">Form Elements </a>
+										<div id="arrow-form-elements"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.checkboxes"></span><a href="05-elements.html#form-elements.checkboxes">Checkboxes</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.custom-form-elements"></span><a href="05-elements.html#form-elements.custom-form-elements">Custom Form Elements</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.dropdown-lists"></span><a href="05-elements.html#form-elements.dropdown-lists">Dropdown Lists</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.form-messaging"></span><a href="05-elements.html#form-elements.form-messaging">Form Messaging</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.input-fields"></span><a href="05-elements.html#form-elements.input-fields">Input Fields</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.labels"></span><a href="05-elements.html#form-elements.labels">Labels</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.multiselect-dropdown"></span><a href="05-elements.html#form-elements.multiselect-dropdown">Multiselect Dropdown</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.password-field"></span><a href="05-elements.html#form-elements.password-field">Password Field</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.radio-buttons"></span><a href="05-elements.html#form-elements.radio-buttons">Radio Buttons</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.search-field"></span><a href="05-elements.html#form-elements.search-field">Search Field</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.submit-button"></span><a href="05-elements.html#form-elements.submit-button">Submit Button</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-form-elements.tool-tips"></span><a href="05-elements.html#form-elements.tool-tips">Tool Tips</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#icons">Icons </a>
+										<div id="arrow-icons"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-icons.spinner"></span><a href="05-elements.html#icons.spinner">Spinner</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#layouts">Layouts </a>
+										<div id="arrow-layouts"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts.1-column-layout"></span><a href="05-elements.html#layouts.1-column-layout">1 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts.2-column-layout"></span><a href="05-elements.html#layouts.2-column-layout">2 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts.3-column-layout"></span><a href="05-elements.html#layouts.3-column-layout">3 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts.4-column-layout"></span><a href="05-elements.html#layouts.4-column-layout">4 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts.5-column-layout"></span><a href="05-elements.html#layouts.5-column-layout">5 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts.7-column-layout"></span><a href="05-elements.html#layouts.7-column-layout">7 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts.8-to-4-column-layout"></span><a href="05-elements.html#layouts.8-to-4-column-layout">8 To 4 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts.nested-rows"></span><a href="05-elements.html#layouts.nested-rows">Nested Rows</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#layouts-Ι-same-height-columns">Layouts Ι Same Height Columns </a>
+										<div id="arrow-layouts-Ι-same-height-columns"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts-Ι-same-height-columns.!overview"></span><a href="05-elements.html#layouts-Ι-same-height-columns.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts-Ι-same-height-columns.feature-boxes"></span><a href="05-elements.html#layouts-Ι-same-height-columns.feature-boxes">Feature Boxes</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts-Ι-same-height-columns.full-bleed-images"></span><a href="05-elements.html#layouts-Ι-same-height-columns.full-bleed-images">Full Bleed Images</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts-Ι-same-height-columns.nested-feature-box"></span><a href="05-elements.html#layouts-Ι-same-height-columns.nested-feature-box">Nested Feature Box</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-layouts-Ι-same-height-columns.stack-example"></span><a href="05-elements.html#layouts-Ι-same-height-columns.stack-example">Stack Example</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#ligature-icons">Ligature Icons </a>
+										<div id="arrow-ligature-icons"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-ligature-icons.!overview"></span><a href="05-elements.html#ligature-icons.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-ligature-icons.font-icon-text-replace"></span><a href="05-elements.html#ligature-icons.font-icon-text-replace">Font Icon Text Replace</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#lists">Lists </a>
+										<div id="arrow-lists"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-lists.!overview"></span><a href="05-elements.html#lists.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-lists.lined-lists-with-icons"></span><a href="05-elements.html#lists.lined-lists-with-icons">Lined Lists With Icons</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-lists.lists-with-icons"></span><a href="05-elements.html#lists.lists-with-icons">Lists With Icons</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-lists.lists-with-line-separator"></span><a href="05-elements.html#lists.lists-with-line-separator">Lists With Line Separator</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-lists.lists-with-no-bullets"></span><a href="05-elements.html#lists.lists-with-no-bullets">Lists With No Bullets</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-lists.ordered-and-unordered-lists-that-nest"></span><a href="05-elements.html#lists.ordered-and-unordered-lists-that-nest">Ordered And Unordered Lists That Nest</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-lists.ordered-list"></span><a href="05-elements.html#lists.ordered-list">Ordered List</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#message-boxes">Message Boxes </a>
+										<div id="arrow-message-boxes"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-message-boxes.!overview"></span><a href="05-elements.html#message-boxes.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-message-boxes.alert-messaging"></span><a href="05-elements.html#message-boxes.alert-messaging">Alert Messaging</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-message-boxes.error-messaging"></span><a href="05-elements.html#message-boxes.error-messaging">Error Messaging</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-message-boxes.form-messaging"></span><a href="05-elements.html#message-boxes.form-messaging">Form Messaging</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-message-boxes.info-messaging"></span><a href="05-elements.html#message-boxes.info-messaging">Info Messaging</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-message-boxes.info-panes-floating"></span><a href="05-elements.html#message-boxes.info-panes-floating">Info Panes Floating</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-message-boxes.info-panes-icons"></span><a href="05-elements.html#message-boxes.info-panes-icons">Info Panes Icons</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#misc-formatting">Misc Formatting </a>
+										<div id="arrow-misc-formatting"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-misc-formatting.Alignment-formatting"></span><a href="05-elements.html#misc-formatting.Alignment-formatting">Alignment Formatting</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-misc-formatting.additional-misc-formatting"></span><a href="05-elements.html#misc-formatting.additional-misc-formatting">Additional Misc Formatting</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-misc-formatting.floats"></span><a href="05-elements.html#misc-formatting.floats">Floats</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#sliders">Sliders </a>
+										<div id="arrow-sliders"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sliders.!placeholder"></span><a href="05-elements.html#sliders.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#steppers">Steppers </a>
+										<div id="arrow-steppers"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-steppers.!placeholder"></span><a href="05-elements.html#steppers.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#the-stacks">The Stacks </a>
+										<div id="arrow-the-stacks"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks.$overview"></span><a href="05-elements.html#the-stacks.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks.stack-level1"></span><a href="05-elements.html#the-stacks.stack-level1">Stack Level 1</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks.stack-level2"></span><a href="05-elements.html#the-stacks.stack-level2">Stack Level 2</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks.stack-level3"></span><a href="05-elements.html#the-stacks.stack-level3">Stack Level 3</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks.stack-level4"></span><a href="05-elements.html#the-stacks.stack-level4">Stack Level 4</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks.stack-with-nested-boxes"></span><a href="05-elements.html#the-stacks.stack-with-nested-boxes">Stack With Nested Boxes</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#the-stacks-I-same-height">The Stacks I Same Height </a>
+										<div id="arrow-the-stacks-I-same-height"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks-I-same-height.$overview"></span><a href="05-elements.html#the-stacks-I-same-height.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks-I-same-height.7-column-stack"></span><a href="05-elements.html#the-stacks-I-same-height.7-column-stack">7 Column Stack</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks-I-same-height.featurebox-example"></span><a href="05-elements.html#the-stacks-I-same-height.featurebox-example">Featurebox Example</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks-I-same-height.full-bleed-stack-example"></span><a href="05-elements.html#the-stacks-I-same-height.full-bleed-stack-example">Full Bleed Stack Example</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks-I-same-height.nested-featurebox"></span><a href="05-elements.html#the-stacks-I-same-height.nested-featurebox">Nested Featurebox</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-the-stacks-I-same-height.stack-example"></span><a href="05-elements.html#the-stacks-I-same-height.stack-example">Stack Example</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="05-elements.html#typographic-styles">Typographic Styles </a>
+										<div id="arrow-typographic-styles"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.H1-heading"></span><a href="05-elements.html#typographic-styles.H1-heading">H1 Heading</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.H2-heading"></span><a href="05-elements.html#typographic-styles.H2-heading">H2 Heading</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.H3-heading"></span><a href="05-elements.html#typographic-styles.H3-heading">H3 Heading</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.H4-heading"></span><a href="05-elements.html#typographic-styles.H4-heading">H4 Heading</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.H5-heading"></span><a href="05-elements.html#typographic-styles.H5-heading">H5 Heading</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.H6-heading"></span><a href="05-elements.html#typographic-styles.H6-heading">H6 Heading</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.basic-copy"></span><a href="05-elements.html#typographic-styles.basic-copy">Basic Copy</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.breadcrumbs"></span><a href="05-elements.html#typographic-styles.breadcrumbs">Breadcrumbs</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.disclaimer"></span><a href="05-elements.html#typographic-styles.disclaimer">Disclaimer</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.links"></span><a href="05-elements.html#typographic-styles.links">Links</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.pricing-data"></span><a href="05-elements.html#typographic-styles.pricing-data">Pricing Data</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.special-marker"></span><a href="05-elements.html#typographic-styles.special-marker">Special Marker</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.subscripts"></span><a href="05-elements.html#typographic-styles.subscripts">Subscripts</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-typographic-styles.superscripts"></span><a href="05-elements.html#typographic-styles.superscripts">Superscripts</a>
+									</li>
+								
+								</div>
+						 </ul>
+					</ul>
+				</li>
+				<li>
+						<a href="06-modules.html" class="f-menu__heading">06 Modules</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#!placeholder">Placeholder </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#feature-boxes">Feature Boxes </a>
+										<div id="arrow-feature-boxes"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-feature-boxes.!overview"></span><a href="06-modules.html#feature-boxes.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-feature-boxes.c3-and-smaller"></span><a href="06-modules.html#feature-boxes.c3-and-smaller">C 3 And Smaller</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-feature-boxes.c4-feature-box"></span><a href="06-modules.html#feature-boxes.c4-feature-box">C 4 Feature Box</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-feature-boxes.c6-and-larger"></span><a href="06-modules.html#feature-boxes.c6-and-larger">C 6 And Larger</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-feature-boxes.feature-products"></span><a href="06-modules.html#feature-boxes.feature-products">Feature Products</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#forms">Forms </a>
+										<div id="arrow-forms"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-forms.!overview"></span><a href="06-modules.html#forms.!overview">Overview</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#headers-and-footers">Headers And Footers </a>
+										<div id="arrow-headers-and-footers"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-headers-and-footers.!overview"></span><a href="06-modules.html#headers-and-footers.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-headers-and-footers.copyright_information"></span><a href="06-modules.html#headers-and-footers.copyright_information">Copyright Information</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-headers-and-footers.footers"></span><a href="06-modules.html#headers-and-footers.footers">Footers</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-headers-and-footers.header-simplified"></span><a href="06-modules.html#headers-and-footers.header-simplified">Header Simplified</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-headers-and-footers.header-standard"></span><a href="06-modules.html#headers-and-footers.header-standard">Header Standard</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-headers-and-footers.header-third-party"></span><a href="06-modules.html#headers-and-footers.header-third-party">Header Third Party</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#loading">Loading </a>
+										<div id="arrow-loading"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-loading.elements"></span><a href="06-modules.html#loading.elements">Elements</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-loading.pages"></span><a href="06-modules.html#loading.pages">Pages</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#modal-windows">Modal Windows </a>
+										<div id="arrow-modal-windows"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-modal-windows.!overview"></span><a href="06-modules.html#modal-windows.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-modal-windows.modal-windows"></span><a href="06-modules.html#modal-windows.modal-windows">Modal Windows</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#navigation-systems">Navigation Systems </a>
+										<div id="arrow-navigation-systems"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-navigation-systems.!placeholder"></span><a href="06-modules.html#navigation-systems.!placeholder">Placeholder</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-navigation-systems.basic-pagination"></span><a href="06-modules.html#navigation-systems.basic-pagination">Basic Pagination</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-navigation-systems.chapter-nav"></span><a href="06-modules.html#navigation-systems.chapter-nav">Chapter Nav</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-navigation-systems.left-navigation"></span><a href="06-modules.html#navigation-systems.left-navigation">Left Navigation</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-navigation-systems.sub-tab-anchor-navigation"></span><a href="06-modules.html#navigation-systems.sub-tab-anchor-navigation">Sub Tab Anchor Navigation</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#show-and-hide-content">Show And Hide Content </a>
+										<div id="arrow-show-and-hide-content"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-show-and-hide-content.!overview"></span><a href="06-modules.html#show-and-hide-content.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-show-and-hide-content.01-light-accordion"></span><a href="06-modules.html#show-and-hide-content.01-light-accordion">01 Light Accordion</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-show-and-hide-content.02-heavy-accordion"></span><a href="06-modules.html#show-and-hide-content.02-heavy-accordion">02 Heavy Accordion</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-show-and-hide-content.03-text-accordion"></span><a href="06-modules.html#show-and-hide-content.03-text-accordion">03 Text Accordion</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-show-and-hide-content.04-text-in-small-spaces"></span><a href="06-modules.html#show-and-hide-content.04-text-in-small-spaces">04 Text In Small Spaces</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-show-and-hide-content.05-tool-function"></span><a href="06-modules.html#show-and-hide-content.05-tool-function">05 Tool Function</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-show-and-hide-content.06-navigation"></span><a href="06-modules.html#show-and-hide-content.06-navigation">06 Navigation</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#side-navigation-selected-content">Side Navigation Selected Content </a>
+										<div id="arrow-side-navigation-selected-content"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-side-navigation-selected-content.side-navigation-selected-content"></span><a href="06-modules.html#side-navigation-selected-content.side-navigation-selected-content">Side Navigation Selected Content</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#sub-family-content-box">Sub Family Content Box </a>
+										<div id="arrow-sub-family-content-box"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-content-box.subfamily-content-box"></span><a href="06-modules.html#sub-family-content-box.subfamily-content-box">Subfamily Content Box</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#table-of-contents">Table Of Contents </a>
+										<div id="arrow-table-of-contents"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-table-of-contents.!overview"></span><a href="06-modules.html#table-of-contents.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-table-of-contents.getting-started-tab"></span><a href="06-modules.html#table-of-contents.getting-started-tab">Getting Started Tab</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-table-of-contents.support-and-community-tab"></span><a href="06-modules.html#table-of-contents.support-and-community-tab">Support And Community Tab</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-table-of-contents.tools-and-software-tab"></span><a href="06-modules.html#table-of-contents.tools-and-software-tab">Tools And Software Tab</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#tables">Tables </a>
+										<div id="arrow-tables"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tables.$overview"></span><a href="06-modules.html#tables.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tables.01-standard-tables"></span><a href="06-modules.html#tables.01-standard-tables">01 Standard Tables</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tables.02-comparison-tables"></span><a href="06-modules.html#tables.02-comparison-tables">02 Comparison Tables</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tables.03-sortable-tables"></span><a href="06-modules.html#tables.03-sortable-tables">03 Sortable Tables</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tables.04-sticky-tables"></span><a href="06-modules.html#tables.04-sticky-tables">04 Sticky Tables</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tables.05-variations"></span><a href="06-modules.html#tables.05-variations">05 Variations</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tables.06-overflow-tables"></span><a href="06-modules.html#tables.06-overflow-tables">06 Overflow Tables</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#technical-documents">Technical Documents </a>
+										<div id="arrow-technical-documents"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-technical-documents.technical-documents"></span><a href="06-modules.html#technical-documents.technical-documents">Technical Documents</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#value-prop-box">Value Prop Box </a>
+										<div id="arrow-value-prop-box"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-box.!overview"></span><a href="06-modules.html#value-prop-box.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-box.value-prop-box"></span><a href="06-modules.html#value-prop-box.value-prop-box">Value Prop Box</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#value-prop-header">Value Prop Header </a>
+										<div id="arrow-value-prop-header"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.!overview"></span><a href="06-modules.html#value-prop-header.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.01-text-only-banner"></span><a href="06-modules.html#value-prop-header.01-text-only-banner">01 Text Only Banner</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.02-still-image-banner"></span><a href="06-modules.html#value-prop-header.02-still-image-banner">02 Still Image Banner</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.03-images-I-backgrounds"></span><a href="06-modules.html#value-prop-header.03-images-I-backgrounds">03 Images I Backgrounds</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.03-images-I-collage-sample-and-template"></span><a href="06-modules.html#value-prop-header.03-images-I-collage-sample-and-template">03 Images I Collage Sample And Template</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.03-images-I-full-bleed-template"></span><a href="06-modules.html#value-prop-header.03-images-I-full-bleed-template">03 Images I Full Bleed Template</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.04-slides-multiple-ctas"></span><a href="06-modules.html#value-prop-header.04-slides-multiple-ctas">04 Slides Multiple Ctas</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.05-slides-single-cta"></span><a href="06-modules.html#value-prop-header.05-slides-single-cta">05 Slides Single Cta</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.06-frames-example"></span><a href="06-modules.html#value-prop-header.06-frames-example">06 Frames Example</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.07-bracket"></span><a href="06-modules.html#value-prop-header.07-bracket">07 Bracket</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-value-prop-header.08-mobile-view"></span><a href="06-modules.html#value-prop-header.08-mobile-view">08 Mobile View</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="06-modules.html#widgets">Widgets </a>
+										<div id="arrow-widgets"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-widgets.!overview"></span><a href="06-modules.html#widgets.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-widgets.RSS-All-Developer-details"></span><a href="06-modules.html#widgets.RSS-All-Developer-details">Rss All Developer Details</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-widgets.RSS-Feed-Blogs"></span><a href="06-modules.html#widgets.RSS-Feed-Blogs">Rss Feed Blogs</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-widgets.RSS-Feed-Forums"></span><a href="06-modules.html#widgets.RSS-Feed-Forums">Rss Feed Forums</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-widgets.RSS-Feed-Tags"></span><a href="06-modules.html#widgets.RSS-Feed-Tags">Rss Feed Tags</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-widgets.webench-tool"></span><a href="06-modules.html#widgets.webench-tool">Webench Tool</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-widgets.widget-slideshow-generator"></span><a href="06-modules.html#widgets.widget-slideshow-generator">Widget Slideshow Generator</a>
+									</li>
+								
+								</div>
+						 </ul>
+					</ul>
+				</li>
+				<li>
+						<a href="07-templates.html" class="f-menu__heading">07 Templates</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="07-templates.html#!placeholder">Placeholder </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="07-templates.html#comparison">Comparison </a>
+										<div id="arrow-comparison"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-comparison.!overview"></span><a href="07-templates.html#comparison.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-comparison.01-summary-cta"></span><a href="07-templates.html#comparison.01-summary-cta">01 Summary Cta</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-comparison.02-multi-feature-check"></span><a href="07-templates.html#comparison.02-multi-feature-check">02 Multi Feature Check</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-comparison.03-products"></span><a href="07-templates.html#comparison.03-products">03 Products</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="07-templates.html#general-layouts">General Layouts </a>
+										<div id="arrow-general-layouts"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-general-layouts.!placeholder"></span><a href="07-templates.html#general-layouts.!placeholder">Placeholder</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-general-layouts.1-column-layout"></span><a href="07-templates.html#general-layouts.1-column-layout">1 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-general-layouts.2-column-layout"></span><a href="07-templates.html#general-layouts.2-column-layout">2 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-general-layouts.3-column-layout"></span><a href="07-templates.html#general-layouts.3-column-layout">3 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-general-layouts.4-column-layout"></span><a href="07-templates.html#general-layouts.4-column-layout">4 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-general-layouts.5-column-layout"></span><a href="07-templates.html#general-layouts.5-column-layout">5 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-general-layouts.7-column-layout"></span><a href="07-templates.html#general-layouts.7-column-layout">7 Column Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-general-layouts.8-to-4-column-layout"></span><a href="07-templates.html#general-layouts.8-to-4-column-layout">8 To 4 Column Layout</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="07-templates.html#livesite-wrapper">Livesite Wrapper </a>
+										<div id="arrow-livesite-wrapper"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-livesite-wrapper.LiveSite-template"></span><a href="07-templates.html#livesite-wrapper.LiveSite-template">Live Site Template</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="07-templates.html#product-family-tabs">Product Family Tabs </a>
+										<div id="arrow-product-family-tabs"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-product-family-tabs.!placeholder"></span><a href="07-templates.html#product-family-tabs.!placeholder">Placeholder</a>
+									</li>
+								
+								</div>
+						 </ul>
+					</ul>
+				</li>
+				<li>
+						<a href="08-pages.html" class="f-menu__heading">08 Pages</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="08-pages.html#applications-tab">Applications Tab </a>
+										<div id="arrow-applications-tab"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-applications-tab.$overview"></span><a href="08-pages.html#applications-tab.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-applications-tab.applications-tab"></span><a href="08-pages.html#applications-tab.applications-tab">Applications Tab</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-applications-tab.images-for-applications-tab"></span><a href="08-pages.html#applications-tab.images-for-applications-tab">Images For Applications Tab</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="08-pages.html#comparitive-product-chart">Comparitive Product Chart </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="08-pages.html#featured-products-tab">Featured Products Tab </a>
+										<div id="arrow-featured-products-tab"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-featured-products-tab.$overview"></span><a href="08-pages.html#featured-products-tab.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-featured-products-tab.basic-layout-with-banner-and-static-list"></span><a href="08-pages.html#featured-products-tab.basic-layout-with-banner-and-static-list">Basic Layout With Banner And Static List</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-featured-products-tab.basic-layout-with-dynamic-and-static-lists"></span><a href="08-pages.html#featured-products-tab.basic-layout-with-dynamic-and-static-lists">Basic Layout With Dynamic And Static Lists</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-featured-products-tab.basic-layout-with-static-news-listing"></span><a href="08-pages.html#featured-products-tab.basic-layout-with-static-news-listing">Basic Layout With Static News Listing</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="08-pages.html#getting-started-tab">Getting Started Tab </a>
+										<div id="arrow-getting-started-tab"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-getting-started-tab.$overview"></span><a href="08-pages.html#getting-started-tab.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-getting-started-tab.table-of-contents-listing"></span><a href="08-pages.html#getting-started-tab.table-of-contents-listing">Table Of Contents Listing</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="08-pages.html#hybrid-subfamily-layout">Hybrid Subfamily Layout </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="08-pages.html#sub-family-overview-tab">Sub Family Overview Tab </a>
+										<div id="arrow-sub-family-overview-tab"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.$overview"></span><a href="08-pages.html#sub-family-overview-tab.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.applications-focused-I-basic"></span><a href="08-pages.html#sub-family-overview-tab.applications-focused-I-basic">Applications Focused I Basic</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.applications-focused-I-featurebox"></span><a href="08-pages.html#sub-family-overview-tab.applications-focused-I-featurebox">Applications Focused I Featurebox</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.applications-focused-I-grid"></span><a href="08-pages.html#sub-family-overview-tab.applications-focused-I-grid">Applications Focused I Grid</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.basic-layout"></span><a href="08-pages.html#sub-family-overview-tab.basic-layout">Basic Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.category-layout"></span><a href="08-pages.html#sub-family-overview-tab.category-layout">Category Layout</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.table-of-contents-basic"></span><a href="08-pages.html#sub-family-overview-tab.table-of-contents-basic">Table Of Contents Basic</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.table-of-contents-with-call-to-action"></span><a href="08-pages.html#sub-family-overview-tab.table-of-contents-with-call-to-action">Table Of Contents With Call To Action</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.value-proposition-boxes"></span><a href="08-pages.html#sub-family-overview-tab.value-proposition-boxes">Value Proposition Boxes</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-sub-family-overview-tab.value-proposition-header"></span><a href="08-pages.html#sub-family-overview-tab.value-proposition-header">Value Proposition Header</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="08-pages.html#support-and-training-tab">Support And Training Tab </a>
+										<div id="arrow-support-and-training-tab"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-support-and-training-tab.$overview"></span><a href="08-pages.html#support-and-training-tab.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-support-and-training-tab.basic-layout-with-video-player"></span><a href="08-pages.html#support-and-training-tab.basic-layout-with-video-player">Basic Layout With Video Player</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-support-and-training-tab.content-boxes-with-feature-boxes"></span><a href="08-pages.html#support-and-training-tab.content-boxes-with-feature-boxes">Content Boxes With Feature Boxes</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-support-and-training-tab.text-listing"></span><a href="08-pages.html#support-and-training-tab.text-listing">Text Listing</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="08-pages.html#technical-documents-tab">Technical Documents Tab </a>
+										<div id="arrow-technical-documents-tab"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-technical-documents-tab.$overview"></span><a href="08-pages.html#technical-documents-tab.$overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-technical-documents-tab.graphical-listing"></span><a href="08-pages.html#technical-documents-tab.graphical-listing">Graphical Listing</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-technical-documents-tab.text-listing"></span><a href="08-pages.html#technical-documents-tab.text-listing">Text Listing</a>
+									</li>
+								
+								</div>
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="08-pages.html#tools-and-software-tab">Tools And Software Tab </a>
+										<div id="arrow-tools-and-software-tab"class="f-menu-arrow-up"></div>
+								</span>
+								<div class="f-menu-container hidden">
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.!overview"></span><a href="08-pages.html#tools-and-software-tab.!overview">Overview</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.basic-listing"></span><a href="08-pages.html#tools-and-software-tab.basic-listing">Basic Listing</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.feature-box-and-dynamic-table"></span><a href="08-pages.html#tools-and-software-tab.feature-box-and-dynamic-table">Feature Box And Dynamic Table</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.feature-box_grid-listing"></span><a href="08-pages.html#tools-and-software-tab.feature-box_grid-listing">Feature Box Grid Listing</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.feature_box_and_dynamic_table_alt_version"></span><a href="08-pages.html#tools-and-software-tab.feature_box_and_dynamic_table_alt_version">Feature Box And Dynamic Table Alt Version</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.grid-listing-1-column"></span><a href="08-pages.html#tools-and-software-tab.grid-listing-1-column">Grid Listing 1 Column</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.grid-listing-2-column"></span><a href="08-pages.html#tools-and-software-tab.grid-listing-2-column">Grid Listing 2 Column</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.grid-listing-3-column"></span><a href="08-pages.html#tools-and-software-tab.grid-listing-3-column">Grid Listing 3 Column</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.grid-listing"></span><a href="08-pages.html#tools-and-software-tab.grid-listing">Grid Listing</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.list-with-dynamic-content-and-tool"></span><a href="08-pages.html#tools-and-software-tab.list-with-dynamic-content-and-tool">List With Dynamic Content And Tool</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.list-with-dynamic-table-and-tool"></span><a href="08-pages.html#tools-and-software-tab.list-with-dynamic-table-and-tool">List With Dynamic Table And Tool</a>
+									</li>
+								
+								
+									<li class="f-menu-items">
+										<span class="f-menu-tag" id="menu-tools-and-software-tab.tool-category-boxes"></span><a href="08-pages.html#tools-and-software-tab.tool-category-boxes">Tool Category Boxes</a>
+									</li>
+								
+								</div>
+						 </ul>
+					</ul>
+				</li>
+				<li>
+						<a href="09-microsite.html" class="f-menu__heading">09 Microsite</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="09-microsite.html#01-Microsite-template">01 Microsite Template </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="09-microsite.html#02-Campain_single_page">02 Campain Single Page </a>
+								</span>
+								
+								
+						 </ul>
+					</ul>
+				</li>
+				<li>
+						<a href="10-sunset-styles.html" class="f-menu__heading">10 Sunset Styles</a> 
+		
+					<ul class="hidden">
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="10-sunset-styles.html#accordion-large-content-areas-show-and-hide">Accordion Large Content Areas Show And Hide </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="10-sunset-styles.html#accordion-small-content-areas-show-and-hide">Accordion Small Content Areas Show And Hide </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="10-sunset-styles.html#accordion-style-show-hide-content-listing">Accordion Style Show Hide Content Listing </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="10-sunset-styles.html#enlarge-button">Enlarge Button </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="10-sunset-styles.html#lists-with-double-arrow-for-bullet">Lists With Double Arrow For Bullet </a>
+								</span>
+								
+								
+						 </ul>
+						<ul class="f-menu__subheading">
+								<span>
+										<a href="10-sunset-styles.html#seo-footer-text">Seo Footer Text </a>
+								</span>
+								
+								
+						 </ul>
+					</ul>
+				</li>
+		
+				<!-- Hiding Structures and Docs until need
+		
+		
+				<li>
+					<a href="docs.html" class="f-menu__heading">Docs</a>
+					<ul>
+					</ul>
+				</li>
+		
+				-->
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<script>
+		/*==============================================================*/
+		//MENU LIST ITEM HANDLERS
+		/*========================================================*/
+		
+		//INITIATE
+		//Show only the menu-heading that you are currently on
+		//Takes the current <pathname> of the url you are on, removes the '/'
+		//Then takes that string to be used as a target to open the menu that corresponds
+		//to the major heading page you have open
+			var pathString = window.location.pathname;
+			pathString = pathString.substr(1);
+			//$('a[href="' + pathString + '"]').next().show();
+			
+			//CLick for links on menu: resets the search filter to display all
+			/*
+			$('.f-menu a').click(function(){
+				$('#fab_input').val("Search");
+				$('#searchAnswer').remove();
+				$('.f-item-group').each(function (i){
+					$(this).show();
+				});
+			});*/
+		
+		
+			//Handles click for the arrows
+			//Up arrow means collapsed files
+			$(".f-menu__subheading > span").click(function(){
+				//Check if it's open or not
+				if($(this).find("div").hasClass("f-menu-arrow-up")){
+					//Shows all grouping
+					$(this).nextAll().show();
+					//Toggles Arrow
+				    $(this).find("div").removeClass("f-menu-arrow-up").addClass("f-menu-arrow-down");
+				}else{
+					$(this).nextAll().hide();
+					//Toggles Arrow
+				    $(this).find("div").removeClass("f-menu-arrow-down").addClass("f-menu-arrow-up");
+				}
+			});
+		
+		
+		
+		</script>		<!--<![endif]-->
+		<div class="f-container">
+			<div class="f-control-bar">
+			
+				<div class="f-control f-menu-toggle">
+					
+					<svg>
+						<use xlink:href="#f-icon-menu" />
+					</svg>
+			
+				</div>
+			
+				<span id="f-control-bar-title"></span>
+			
+			
+			<!--
+			<span id="f-search-bar">
+			
+				<input 
+				  type="text" 
+				  autocomplete="off" 
+				  name="searchTerm" 
+				  value="Search" 
+				  onfocus="if(this.value=='Search')this.value=''" 
+				  onblur="reset();if(this.value==''){this.value='Search';showAll();suggestionArray=[];}" 
+				  onkeyup="if((event.which == 13)||(event.keyCode == 13)){suggestionArray=[]; presentSuggestions(this.value);}
+				  			else{searchFunction();}"
+				  onkeydown="if ((event.which == 8)||(event.keyCode == 8)) {suggestionArray=[];}"
+				  class="searchInputFab" 
+				  id="fab_input">
+				      
+				<input 
+				  type="submit" 
+				  onclick="presentSuggestions($('#fab_input').val())"
+				  name="Submit" 
+				  value="" 
+				  class="searchButtonFab">
+			
+			</span> -->
+			</div>
+			
+			<script>
+			var suggestionArray = [];
+			
+			String.prototype.splice = function( idx, rem, s ) {
+			    return (this.slice(0,idx) + s + this.slice(idx + Math.abs(rem)));
+			};
+			
+			//Commented out to load before DOM
+			//$(document).ready(function(){
+			
+			//Changes title of menu Bar
+			
+				var url = window.location.href;
+				var start = url.lastIndexOf("/");
+				var end = url.lastIndexOf(".");
+			
+				var title = url.slice(start + 1, end);
+				title = title.replace(/-/g, ' ');
+			
+				$('#f-control-bar-title').html(title);
+			
+				//Only show the search if not in front page or structure
+				if(title == "index" || title == "structures"){
+					$("#f-search-bar").hide();
+					$("#f-control-bar-links").show();
+				}else{
+					$("#f-search-bar").show();
+					$("#f-control-bar-links").hide();
+				}
+			
+			//});
+			
+			/*=================================================
+			searchFunction
+			
+			Hides all '.f-item-group' classes in the DOM tree and then
+			takes the text input in the search query and searches the ID of
+			each .f-item-group class to see if the query is found and displays 
+			only them. 
+			
+			If item is not found it will create a response with suggestions.
+			================================================*/
+				function searchFunction(){
+			
+					var foundAnItem = false; //Flag to see if an item is found
+					var txtInput = $('#fab_input').val();
+			
+					$('#fab_input').css('border-bottom','3px #118899 solid');
+			
+					hideAll();
+					//Delete any suggestion boxes
+					$('#searchAnswer').remove();
+			
+					//Searches through .f-item-group compares with search input and shows those that return true
+					$('.f-item-group').each(function (i){
+						if (this.id.toLowerCase().replace(/-/g, " ").indexOf(txtInput.toLowerCase()) != -1){
+							foundAnItem = true;
+							$(this).show();
+							$(this).parent().show();
+						}
+			
+					});
+			
+					//If no items are found then offer message and suggestions
+					if(!foundAnItem){
+						
+						var htmlString = "<div class='f-item-group' id='searchAnswer' style='margin-top:5em; line-height: 2;'><h1 style=''>" + txtInput +  " not found :(</h1></div>"
+						$(".f-container").prepend(htmlString);
+			
+						//Will only offer suggestions if the search input is longer than 4 characters
+						//The suggestion is -1 character to hold results that appeared
+						
+						if((txtInput.length > 3)){
+							htmlString = buildSuggestionsHTML(txtInput.substring(0, txtInput.length - 1));
+						}
+			
+						if(suggestionArray.length > 0)
+							$("#searchAnswer").append("<h3>Did you mean?</h3><h5>" + buildSuggestionsHTML(txtInput.substring(0, txtInput.length - 1)) + "</h5>");
+			
+					}
+			
+				}
+			
+			/*=================================================
+			buildSuggestionsHTML function
+			
+			Looks through the f-item-groups with the string and builds an formatted HTML <ul> list
+			of links with onclick functions.
+			
+			PRE: suggestionArray -> the array that holds the most relevant suggestions
+				 txtInput -> the string value of the search field 
+			
+			POST: returns a formatted HTML string for a <ul> of anchor links that have an
+			onclick function to filter the component clicked
+			
+			================================================*/
+				function buildSuggestionsHTML(string){
+					//array is the global array to store suggestions
+							var array = [];
+							array = suggestionArray;
+							var tempArray = [];
+			
+							//Suggestion is the string they entered -1 character
+			
+							
+							$('.f-item-group').each(function (i){
+								var tempId = this.id.toLowerCase().replace(/-/g, " ");
+								
+								//Puts a $ to indicate where the beginning of the matched word is
+								if (tempId.indexOf(string.toLowerCase()) != -1){
+									//For highlighting the Matched Item
+									//var i = tempId.indexOf(suggestion.toLowerCase());
+									//var result = tempId.splice(i, 0, "$");
+									tempArray.push(this.id);
+								}
+							});
+			
+							if(tempArray.length > array.length){
+								array = tempArray;
+							}
+								suggestionArray = array;
+			
+							if(suggestionArray.length > 0){
+								var newString = '<ul>';
+			
+								//Gets the ID name and replaces the '.' with '>' and '-' with ' '
+								for(var i=0; i<array.length; i++){
+									var prunedID = array[i].replace(/-/g, " ");
+			
+									var functionString = "onclick=" + '"' + "getElementById('fab_input').value=" + "'" + prunedID + "';" + "searchFunction();" + '"';
+			
+									//onclick="getElementById('fab_input').value='show-and-hide-content.accordion-style-show-hide-content-listing'"
+									var tempString = "<a href='#' " + functionString + ">";
+									prunedID = prunedID.replace('.', " &gt ");
+									prunedID = prunedID.replace('$', "");
+			
+									tempString += prunedID;
+									tempString += "</a>"
+									
+									newString += tempString;
+									newString += "<br>";
+								}
+			
+								
+			
+								return(newString + "</ul>");
+							}
+							return("");
+				}
+			
+			/*=================================================
+			presentSuggestions function
+			
+			Hides everything and attaches a styled html onto the "f.container" of the styleguide with
+			the text input as part fo the feedback
+			
+			PRE: txtInput -> the string value of the search field 
+			
+			POST: attaches a formatted HTML string to the top of the ".f-container" of the styleguide
+			
+			================================================*/
+				function presentSuggestions(txtInput){
+			
+					$('#searchAnswer').remove();
+					hideAll();
+					var htmlString = "<div class='f-item-group' id='searchAnswer' style='margin-top:5em; line-height: 2;'><h1 style=''>Search results for <span style='border-bottom:3px solid #990000'> " + txtInput +  ":</span></h1>"
+					htmlString += (buildSuggestionsHTML(txtInput)) + "</div";
+			
+			
+					$(".f-container").prepend(htmlString);
+					
+			
+				}
+			
+			//resets the style of the searchbox
+				function reset(){
+						$('#fab_input').css('border-bottom','initial');
+				}
+			
+			//Shows all the item-groups
+				function showAll(){
+					$('.f-item-group').each(function (i){
+						$(this).show();
+					});
+				}
+			//hides all the item-groups
+				function hideAll(){
+					$('.f-item-group').each(function (i){
+						$(this).hide();
+					});
+				}
+			
+			//IE8 Show menu solution
+			$(function(){
+				$("#f-menu-button-ie8-show").click(function(){
+					$("#f-main-menu").show();
+				});
+			});
+			
+			
+			</script>		
+			
+
+
+	
+<!-- Javascript Libraries Here: -->
+<!-- -->
+
+
+<div class="f-item-group" id="!placeholder">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading"><!--[if IE 8]>&nbsp;<![endif]-->Placeholder</h2>
+		<div class="f-item-controls">
+		
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+		
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+		
+			</span>
+		</div>	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h3>Placeholder</h3>
+<p>Feel free to email questions or comments to the Pattern Library development team: <a href="mailto:webtech-pattern-team@list.ti.com">webtech-pattern-team@list.ti.com</a></p>
+
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+<div class="f-item-preview">
+	
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup"></code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+
+
+
+</div>
+
+
+<div class="f-item-group" id="01-brand-alignment-visual-tone">
+
+
+
+		<div class="c12 f-sectionHeader">
+				<p class="sctnHdr">01 Brand Alignment Visual Tone</p>
+		</div>
+	
+	<!--For the Heading Documentation File of each section-->
+
+
+
+
+			<div class="f-item-group" id="01-brand-alignment-visual-tone.placeholder">
+				
+					
+						<div class="f-item-heading-group" data-f-toggle="labels">
+						<h3 class="f-item-heading">Placeholder</h3>
+						<div class="f-item-controls">
+						
+							<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+								<svg>
+									<use xlink:href="#f-icon-notes" />
+								</svg>
+						
+							</span>
+							<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+								<svg>
+									<use xlink:href="#f-icon-code" />
+								</svg>
+						
+							</span>
+						</div>				
+						</div><div class="f-item-notes" data-f-toggle="notes">
+	<h3>Placeholder</h3>
+<p>Feel free to email questions or comments to the Pattern Library development team: <a href="mailto:webtech-pattern-team@list.ti.com">webtech-pattern-team@list.ti.com</a></p>
+
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+<div class="f-item-preview">
+	
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup"></code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+			</div>
+	<!-- //for the Heading Documentation File of each section-->
+
+
+
+
+</div>
+
+
+<div class="f-item-group" id="02-multi-screen-design-principles">
+
+
+
+		<div class="c12 f-sectionHeader">
+				<p class="sctnHdr">02 Multi Screen Design Principles</p>
+		</div>
+	
+	<!--For the Heading Documentation File of each section-->
+
+
+
+
+			<div class="f-item-group" id="02-multi-screen-design-principles.!overview">
+				
+					
+				
+							<h3>Overview</h3>
+						<p>We generally design <a href="http://TI.com">TI.com</a> with desktop users as its primary audience (full site). Since Tablets are increasingly being used as working computers, have larger screen sizes and higher resolutions, they will display the same full site as the desktop users. All new patterns created for <a href="http://TI.com">TI.com</a> will be touch friendly to work with both desktop and tablet <a href="/01-ui-style-foundations.html#03-touch-friendly-design">touch screens</a>.</p>
+						<p>Users coming to <a href="http://TI.com">TI.com</a> from a mobile device will see an adaptive view (mobile site). This view will be uniquely curated and will contain only the most important parts of <a href="http://TI.com">TI.com</a> in the near term. If a portion of <a href="http://TI.com">TI.com</a> needs to address mobile users, it will be accommodated on project-to-project basis. We may have some cases where we incorporate a responsive layout (i.e. community).</p>
+						<p><strong>November 2016 update:</strong></p>
+						<ul>
+						<li>We are transitioning the Smartphone site (<a href="http://m.TI.com">m.TI.com</a>) to be part of the core UI virtual team. It will be <strong>adaptive not responsive</strong> and uniquely curated. Not everything on <a href="http://TI.com">TI.com</a> desktop will be part of the smartphone offering. A curated experience will be available for the mobile devices.</li>
+						<li>Planning to restart the TI mobile app development in Q3, 2017 and the XA team has been asked to do further research before committing to redesigning it.  This team will be transitioned to the new applications virtual team that is responsible for internal apps. <div class="row"> <img src="assets/images/multi_screen_design.png" alt="multi screen design" /></div></li>
+						</ul>
+						<h4>Metrics</h4>
+						<p>According to data gathered in Q1 and Q2 of 2015, <a href="http://TI.com">TI.com</a> metrics show the majority of tablets and desktops using screens sized at &gt; 1200 pixel width (43% have their browser width between 1200 and 1400). These metrics also show the majority of smartphone users have screen sizes in the 5' range (Top 10 devices are between 4.7 and 5.5), therefore only one breakpoint is needed between smartphones and all other devices. Tablets and desktops should use the same full site view.</p>
+						<p>Recommendations:</p>
+						<ol>
+						<li>Create two views for <a href="http://TI.com">TI.com</a>: 1) <strong>full site</strong> and 2) <strong>mobile site</strong></li>
+						<li>Both views will account for touch screens and multiple devices including smartphones, tablets and desktops</li>
+						<li>Tablet and desktop will use the 'full site' view by default</li>
+						<li>Smartphones will use the 'mobile site' view by default</li>
+						<li>Full site will not use content choreography (slide and stack)</li>
+						<li>In the near-term, the mobile site will use content choreography and content curation (limited content) and focus only on high value pages</li>
+						<li>Customers can switch between views on any device, but mobile view and full site view will not be a one-to-one match in the near-term</li>
+						<li>Only one break point will be used (called the 'mobile adaption point')</li>
+						<li>Full site and mobile site will be driven from one responsive and adaptive code base (no 'm.site')</li>
+						<li>Over time, we will change our strategy based on a 'spectrum' of all known devices that engineers use to interact with <a href="http://TI.com">TI.com</a> (future workplace devices could appear, such as VR headsets and Google Glass)</li>
+						</ol>
+						<p>Reference: <a href="https://sps08.itg.ti.com/sites/UXguidebook/Shared%20Documents/Forms/AllItems.aspx">Multi device strategy working document</a> in the XA shared document repository. (if you get an error pop-up, you can still open directly into power point)</p>
+						
+						<div class="f-item-preview">
+							
+						</div>
+							<div class="row">
+								<div class="c12 f-divider">
+								</div>
+							</div>
+			</div>
+	<!-- //for the Heading Documentation File of each section-->
+
+
+
+
+</div>
+
+
+<div class="f-item-group" id="03-touch-friendly-design">
+
+
+
+		<div class="c12 f-sectionHeader">
+				<p class="sctnHdr">03 Touch Friendly Design</p>
+		</div>
+	
+	<!--For the Heading Documentation File of each section-->
+
+
+
+
+			<div class="f-item-group" id="03-touch-friendly-design.!overview">
+				
+					
+				
+							<h3>In general</h3>
+						<p>Apple's <a href="http://developer.apple.com/iphone/library/documentation/UserExperience/Conceptual/MobileHIG/DesigningNativeApp/DesigningNativeApp.html">iPhone Human Interface Guidelines</a> recommends a minimum target size of 44 pixels wide 44 pixels tall, which is what we use at TI. We also follow recommendations on <a href="https://material.google.com/">Google’s Material Design</a>. Designers and developers must fine tune each new interface according to human factors details.</p>
+						<p>These details include creating designs that offer:</p>
+						<ul>
+						<li>Direct manipulation through rotation or gestures</li>
+						<li>Visual metaphors work well like toggle switches, sliders, flicking pages</li>
+						<li>Consistency: incorporates features and behaviors in ways people expect</li>
+						<li>Feedback to acknowledge actions</li>
+						<li>Users control apps. Apps do not make decisions for users. Help people feel in control</li>
+						<li>First impressions: your icon has to be your business card. Polished and clear. And the first time the app launches it must work correctly, simply and clearly. It should not require a set of instructions and complex help text.</li>
+						<li>Target area is universally 44px square, and please be aware of multiple button placements relative to one another. <div class="row"><img src="assets/images/touch_friendly_target.png" alt="touch friendly target example" /> </div></li>
+						</ul>
+						<h4>Details</h4>
+						<p>Some additional reading can be done here.  In this article, Jonathan Stark at Creative Bloq outlines a lot of mobile design principles such as:</p>
+						<ul>
+						<li>Keep a mobile mindset – it's different than desktop</li>
+						<li>Remember that mobile contexts are on-the-go. Keep in mind the very meaning of the word mobile</li>
+						<li>Design for thumbs as well as fingers</li>
+						<li>Controls should go at the bottom of the screen (beneath the content)</li>
+						<li>Scrolling: avoid it when you can</li>
+						<li>Do not use rollovers as triggers -- you must be able to click or tap to activate</li>
+						<li>If a keyboard is required: make the layout appropriate to integrate that</li>
+						<li>The orientation should not suddenly change. Portrait is most popular but  especially if there is typing, landscape should be allowed</li>
+						<li>When launching, resume where you left off.</li>
+						</ul>
+						<h4>Navigation models:</h4>
+						<ul>
+						<li>Single screen utility apps (eg Weather app on iPhone)</li>
+						<li>Tab bar: Three to six distinct content areas (eg Twitter for iPhone)</li>
+						<li>Drill down: List and detail content hierarchy (eg Settings app on iPhone)</li>
+						</ul>
+						<h4>Gestures</h4>
+						<ul>
+						<li>They should not be too hard to find... make them discoverable. Example: on the promotional iPads mounted in Apple’s retail stores. When a page first loads, any scrollable areas do a quick 'reverse scroll' into their default position.</li>
+						<li>Two hands vs one hand. Android vs mac pinch and zoom.</li>
+						<li>Gestures are mostly 'nice to have' features, not everyone will notice or appreciate them</li>
+						</ul>
+						<h4>Communications:</h4>
+						<ul>
+						<li>Provide feedback for every interaction</li>
+						<li>Modal alerts should be limited try using confirmations instead: “Are you sure you want to delete”</li>
+						</ul>
+						
+						<div class="f-item-preview">
+							
+						</div>
+							<div class="row">
+								<div class="c12 f-divider">
+								</div>
+							</div>
+			</div>
+	<!-- //for the Heading Documentation File of each section-->
+
+
+
+
+</div>
+
+
+<div class="f-item-group" id="04-colour">
+
+
+
+		<div class="c12 f-sectionHeader">
+				<p class="sctnHdr">04 Colour</p>
+		</div>
+	
+	<!--For the Heading Documentation File of each section-->
+
+
+
+
+			<div class="f-item-group" id="04-colour.color-palette">
+				
+					
+						<div class="f-item-heading-group" data-f-toggle="labels">
+						<h3 class="f-item-heading">Color Palette</h3>
+						<div class="f-item-controls">
+						
+							
+							<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+								<svg>
+									<use xlink:href="#f-icon-code" />
+								</svg>
+						
+							</span>
+						</div>				
+						</div>
+<div class="f-item-preview">
+	<div class="row">
+	<h3>Primary Brand Palette</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red</div>
+		<div class="f-color-chip__color">#cc0000</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Black</div>
+		<div class="f-color-chip__color">#000000</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey</div>
+		<div class="f-color-chip__color">#aaaaaa</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">White</div>
+		<div class="f-color-chip__color">#ffffff</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Secondary Brand Palette</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red Secondary</div>
+		<div class="f-color-chip__color">#990000</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Blue1</div>
+		<div class="f-color-chip__color">#115566</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Blue2</div>
+		<div class="f-color-chip__color">#118899</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Blue3</div>
+		<div class="f-color-chip__color">#00bbcc</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Glorious greyscale</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey1</div>
+		<div class="f-color-chip__color">#f9f9f9</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey2</div>
+		<div class="f-color-chip__color">#f0f0f0</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey3</div>
+		<div class="f-color-chip__color">#cccccc</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey4</div>
+		<div class="f-color-chip__color">#b9b9b9</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey5</div>
+		<div class="f-color-chip__color">#aaaaaa</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey6</div>
+		<div class="f-color-chip__color">#999999</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey7</div>
+		<div class="f-color-chip__color">#555555</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey8</div>
+		<div class="f-color-chip__color">#333333</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Radical red scale</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red1</div>
+		<div class="f-color-chip__color">#fbeeee</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red2</div>
+		<div class="f-color-chip__color">#f4dfdf</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red3</div>
+		<div class="f-color-chip__color">#efb9b9</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red4</div>
+		<div class="f-color-chip__color">#cc0000</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red5</div>
+		<div class="f-color-chip__color">#990000</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Tenacious teal scale</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal1</div>
+		<div class="f-color-chip__color">#edf7f8</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal2</div>
+		<div class="f-color-chip__color">#d9f1f4</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal3</div>
+		<div class="f-color-chip__color">#9ed6df</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal4</div>
+		<div class="f-color-chip__color">#00bbcc</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal5</div>
+		<div class="f-color-chip__color">#118899</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal6</div>
+		<div class="f-color-chip__color">#115566</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Yummy yellow scale</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Yellow1</div>
+		<div class="f-color-chip__color">#ffffe5</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Yellow2</div>
+		<div class="f-color-chip__color">#ffffb3</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Table and charts palette</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal1</div>
+		<div class="f-color-chip__color">#115566</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal2</div>
+		<div class="f-color-chip__color">#9ed6df</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal3</div>
+		<div class="f-color-chip__color">#d9f1f4</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Teal4</div>
+		<div class="f-color-chip__color">#edf7f8</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey1</div>
+		<div class="f-color-chip__color">#555555</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey2</div>
+		<div class="f-color-chip__color">#cccccc</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey3</div>
+		<div class="f-color-chip__color">#e0e0e0</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Grey4</div>
+		<div class="f-color-chip__color">#f0f0f0</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red1</div>
+		<div class="f-color-chip__color">#cc0000</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red2</div>
+		<div class="f-color-chip__color">#efb9b9</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red3</div>
+		<div class="f-color-chip__color">#f4dfdf</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Red4</div>
+		<div class="f-color-chip__color">#fbeeee</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Type palette</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Headings</div>
+		<div class="f-color-chip__color">#333333</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Copy</div>
+		<div class="f-color-chip__color">#555555</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Special headings</div>
+		<div class="f-color-chip__color">#cc0000</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Link</div>
+		<div class="f-color-chip__color">#118899</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Active hover</div>
+		<div class="f-color-chip__color">#cc0000</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Visited</div>
+		<div class="f-color-chip__color">#00bbcc</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Hi-lite palette</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Row and column table hover</div>
+		<div class="f-color-chip__color">#edf7f9</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Row and column selected</div>
+		<div class="f-color-chip__color">#ffffe5</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Warning palette</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Yellow</div>
+		<div class="f-color-chip__color">#ffffb3</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Error and confirmation messages used for forms</h3>
+</div>
+<div class="f-color-chips row">
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Error - text message</div>
+		<div class="f-color-chip__color">#cc0000</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Error - icon and message box outline</div>
+		<div class="f-color-chip__color">#990000</div>
+	</div>
+	<div class="f-color-chip c2">
+		<div class="f-color-chip__name">Confirmation colour for icon and message box outline</div>
+		<div class="f-color-chip__color">#44bb55</div>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Messages and Tips (This is TBD)</h3>
+</div>
+<div class="f-color-chips row">
+</div>
+
+<h3>Downloads</h3>
+
+<p><a href="http://4com.corp.ti.com/ims/palette/palette.zip">Palette.zip</a></p>
+
+<p>This file includes the TI palette with new teal and reds.
+	<b>ASE</b> files can be imported into Photoshop, Illustrator and InDesign.
+	<b>CLR</b> file for Flash.</p>
+
+<h3>Other branding color info</h3>
+<p>The full palette can be found on <a href="http://brand.ti.com/pages/vid-color.shtml">Basic Elements.</a> </p>
+
+<!-- IE 8 Fix for color palette to replace the css content: attr(data-color); -->
+<!--[if IE 8]>
+<script>
+	$(function() {
+		$(".f-color-chip__color").each(function(){
+			$(this).parent().css("border-top-color", $(this).html() );
+		});
+	});
+</script>
+
+ <![endif]-->
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Primary Brand Palette&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#cc0000&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Black&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#000000&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#aaaaaa&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;White&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#ffffff&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Secondary Brand Palette&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red Secondary&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#990000&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Blue1&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#115566&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Blue2&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#118899&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Blue3&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#00bbcc&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Glorious greyscale&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey1&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#f9f9f9&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey2&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#f0f0f0&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey3&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#cccccc&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey4&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#b9b9b9&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey5&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#aaaaaa&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey6&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#999999&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey7&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#555555&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey8&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#333333&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Radical red scale&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red1&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#fbeeee&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red2&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#f4dfdf&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red3&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#efb9b9&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red4&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#cc0000&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red5&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#990000&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Tenacious teal scale&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal1&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#edf7f8&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal2&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#d9f1f4&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal3&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#9ed6df&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal4&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#00bbcc&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal5&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#118899&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal6&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#115566&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Yummy yellow scale&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Yellow1&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#ffffe5&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Yellow2&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#ffffb3&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Table and charts palette&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal1&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#115566&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal2&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#9ed6df&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal3&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#d9f1f4&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Teal4&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#edf7f8&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey1&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#555555&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey2&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#cccccc&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey3&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#e0e0e0&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey4&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#f0f0f0&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red1&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#cc0000&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red2&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#efb9b9&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red3&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#f4dfdf&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Red4&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#fbeeee&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Type palette&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Headings&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#333333&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Copy&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#555555&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Special headings&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#cc0000&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Link&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#118899&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Active hover&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#cc0000&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Visited&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#00bbcc&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Hi-lite palette&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Row and column table hover&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#edf7f9&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Row and column selected&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#ffffe5&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Warning palette&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Yellow&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#ffffb3&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Error and confirmation messages used for forms&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Error - text message&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#cc0000&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Error - icon and message box outline&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#990000&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;f-color-chip c2&quot;&gt;
+		&lt;div class=&quot;f-color-chip__name&quot;&gt;Confirmation colour for icon and message box outline&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__color&quot;&gt;#44bb55&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;h3&gt;Messages and Tips (This is TBD)&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;f-color-chips row&quot;&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Downloads&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://4com.corp.ti.com/ims/palette/palette.zip&quot;&gt;Palette.zip&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This file includes the TI palette with new teal and reds.
+	&lt;b&gt;ASE&lt;/b&gt; files can be imported into Photoshop, Illustrator and InDesign.
+	&lt;b&gt;CLR&lt;/b&gt; file for Flash.&lt;/p&gt;
+
+&lt;h3&gt;Other branding color info&lt;/h3&gt;
+&lt;p&gt;The full palette can be found on &lt;a href=&quot;http://brand.ti.com/pages/vid-color.shtml&quot;&gt;Basic Elements.&lt;/a&gt; &lt;/p&gt;
+
+&lt;!-- IE 8 Fix for color palette to replace the css content: attr(data-color); --&gt;
+&lt;!--[if IE 8]&gt;
+&lt;script&gt;
+	$(function() {
+		$(&quot;.f-color-chip__color&quot;).each(function(){
+			$(this).parent().css(&quot;border-top-color&quot;, $(this).html() );
+		});
+	});
+&lt;/script&gt;
+
+ &lt;![endif]--&gt;</code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+			</div>
+	<!-- //for the Heading Documentation File of each section-->
+
+
+
+
+</div>
+
+
+<div class="f-item-group" id="05-typography-fundamentals">
+
+
+
+		<div class="c12 f-sectionHeader">
+				<p class="sctnHdr">05 Typography Fundamentals</p>
+		</div>
+	
+	<!--For the Heading Documentation File of each section-->
+
+
+
+
+			<div class="f-item-group" id="05-typography-fundamentals.Brand-fonts">
+				
+					
+						<div class="f-item-heading-group" data-f-toggle="labels">
+						<h3 class="f-item-heading">Brand Fonts</h3>
+						<div class="f-item-controls">
+						
+							<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+								<svg>
+									<use xlink:href="#f-icon-notes" />
+								</svg>
+						
+							</span>
+							<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+								<svg>
+									<use xlink:href="#f-icon-code" />
+								</svg>
+						
+							</span>
+						</div>				
+						</div><div class="f-item-notes" data-f-toggle="notes">
+	<h1>Brand fonts</h1>
+<h2>Helvetica Neue</h2>
+<p>Our corporate typeface is Helvetica Neue, which is simple, clean and precise. The Helvetica Neue family of fonts is versatile and contemporary, allowing flexibility across many applications.</p>
+<p>When setting type for different applications, use Helvetica Neue 45 Light for entity names on communication pieces. Helvetica Neue 55 Roman is the primary typeface for body copy, while Helvetica Neue 75 Bold is for headlines.</p>
+<h4>Installation</h4>
+<p>Font files are located on 4com: <strong> \4com\ims\Templates\Fonts\  </strong>
+When installing fonts:</p>
+<ul>
+<li>Install these fonts by pasting them into <strong> C:\Windows\Fonts\  </strong></li>
+<li>Restart applications after fonts have been installed</li>
+</ul>
+<p>Also please refer to <a href="http://brand.ti.com/pages/vid-typography.shtml" title="TI Brand System">TI Brand Guide</a> for more information.
+ </p>
+<hr>
+<h1>Typefaces Used in Graphics</h1>
+<p>Our brand typeface (Helvetica Neue) is to be used whenever possible.</p>
+<p>Use for all Roman character set languages including:</p>
+<ul>
+<li>English</li>
+<li>Czech</li>
+<li>French</li>
+<li>German</li>
+<li>Hungarian</li>
+<li>Italian</li>
+<li>Polish</li>
+<li>Portuguese</li>
+<li>Spanish</li>
+</ul>
+<hr>
+<h1>Icon Fonts</h1>
+<p>Refer to <a href="https://infolink.sc.ti.com/business_rooms/marketing_sales/market_lounge_im/w/user_interface_design/8918.font-icons">https://infolink.sc.ti.com/business_rooms/marketing_sales/market_lounge_im/w/user_interface_design/8918.font-icons</a></p>
+<p> </p>
+<hr>
+<h1>Regional typeface exceptions</h1>
+<h2>Microsoft YaHei</h2>
+<p>Font declaration used for the <strong>China</strong> site:</p>
+<ul>
+<li>Microsoft YaHei, 微软雅黑, SimSun, 宋体</li>
+</ul>
+<p> </p>
+<h4>Japanese: shin Go Pro</h4>
+<ul>
+<li>Contains several weight options.
+<strong>HelveticaNeue</strong> used for the EN characters in titles - match the weight</li>
+</ul>
+<p> </p>
+<h4>Chinese (simplified) Microsoft YaHei</h4>
+<p>Contains 2 weights (bold and regular)
+*Part of Microsoft OS install font set</p>
+<ul>
+<li><strong>HelveticaNeue</strong> used for the EN characters in titles - match the weight of the SimHei characters (55 Roman will probably work)</li>
+<li><strong>increase the font size by 1 or 2 points</strong> compare to the English counterpart to increase legibility.</li>
+</ul>
+<p> </p>
+<h4>Chinese (traditional):  AR Heiti2</h4>
+<p>AR Heiti2 typeface is used for <strong>Taiwan</strong>:</p>
+<ul>
+<li>Contains 2 weights (bold and regular)</li>
+<li><strong>HelveticaNeue</strong> used for the EN characters in titles - match the weight of the characters</li>
+<li><strong>increase the font size by 1 or 2 points</strong> compare to the English counterpart to increase legibility.</li>
+</ul>
+<p> </p>
+<h4>Russian: Arial</h4>
+<ul>
+<li>Comes will all OS systems</li>
+<li>Use Arial regular and bold weights.</li>
+</ul>
+<p> </p>
+<h4>Korean: Nanum Gothic</h4>
+<ul>
+<li>
+<p><strong>Nanum Gothic</strong> is a Google font.</p>
+</li>
+<li>
+<p>It comes in 2 weights, bold and regular</p>
+</li>
+<li>
+<p><strong>HelveticaNeue</strong> used for the EN characters in titles - match the weight of the characters</p>
+</li>
+<li>
+<p><strong>increase the font size by 1 or 2 points</strong> compare to the English counterpart to increase legibility.</p>
+</li>
+</ul>
+
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+<div class="f-item-preview">
+	
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup"></code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+			</div>
+	<!-- //for the Heading Documentation File of each section-->
+
+
+			<div class="f-item-group" id="05-typography-fundamentals.Icon-fonts">
+				<div class="f-item-heading-group" data-f-toggle="labels">
+					<h3 class="f-item-heading">Icon Fonts</h3>
+					<div class="f-item-controls">
+					
+						<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+							<svg>
+								<use xlink:href="#f-icon-notes" />
+							</svg>
+					
+						</span>
+						<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+							<svg>
+								<use xlink:href="#f-icon-code" />
+							</svg>
+					
+						</span>
+					</div>				</div><!--[if IE 8]>&nbsp;<![endif]--> <div class="f-item-notes" data-f-toggle="notes">
+	<h1>Icon Fonts</h1>
+<p>Refer to <a href="https://infolink.sc.ti.com/business_rooms/marketing_sales/market_lounge_im/w/user_interface_design/8918.font-icons">https://infolink.sc.ti.com/business_rooms/marketing_sales/market_lounge_im/w/user_interface_design/8918.font-icons</a></p>
+
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+<div class="f-item-preview">
+	
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup"></code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+			</div>
+
+			<div class="f-item-group" id="05-typography-fundamentals.Web-fonts">
+				<div class="f-item-heading-group" data-f-toggle="labels">
+					<h3 class="f-item-heading">Web Fonts</h3>
+					<div class="f-item-controls">
+					
+						<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+							<svg>
+								<use xlink:href="#f-icon-notes" />
+							</svg>
+					
+						</span>
+						<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+							<svg>
+								<use xlink:href="#f-icon-code" />
+							</svg>
+					
+						</span>
+					</div>				</div><!--[if IE 8]>&nbsp;<![endif]--> <div class="f-item-notes" data-f-toggle="notes">
+	<h1>Typefaces used in HTML</h1>
+<p> </p>
+<h2>Open Sans</h2>
+<p><a href="http://www.google.com/fonts/specimen/Open+Sans" title="Google Open Sans">Google's Open Sans</a> is the primary font selected for navigation, sub navigation, headlines and subheadlines. This font is web friendly and replaces Helvetica Neue in a web/digital environment. Consistent use of this san serif typeface provides consistency and the desired hierarchy of information.</p>
+<p>Weights supported include:</p>
+<ul>
+<li>300 (normal)</li>
+<li>400 (normal)</li>
+<li>600 (medium)</li>
+</ul>
+<p><img src="http://4com.corp.ti.com/ims/style_guide_pattern_library/screenshots-for-guide/default-lang.png" alt="Good line length esxample"></p>
+<p> </p>
+<hr>
+<h2>Substitute typefaces</h2>
+<h4>Arial / Arial Unicode</h4>
+<p>Arial is the default typeface for some online communications including emails and newsletters.</p>
+<p>Certain languages require arial unicode for certain characters.</p>
+<p> </p>
+<h4>Microsoft YaHei</h4>
+<p>Default typeface used for the <strong>China</strong> site:</p>
+<ul>
+<li>Microsoft YaHei, 微软雅黑, SimSun, 宋体</li>
+</ul>
+<p> </p>
+<h4>Roboto / Roboto Condensed</h4>
+<p>Google's <a href="http://www.google.com/fonts/specimen/Roboto" title="Roboto">Roboto</a> is used on the following websites:</p>
+<ul>
+<li>various campaign pages</li>
+<li>Corporate Citizen</li>
+<li>Public Policy</li>
+</ul>
+<p>Weights supported include:</p>
+<ul>
+<li>100 (normal)</li>
+<li>400 (normal)</li>
+<li>500 (medium)</li>
+</ul>
+
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+<div class="f-item-preview">
+	
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup"></code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+			</div>
+
+			<div class="f-item-group" id="05-typography-fundamentals.line-length">
+				<div class="f-item-heading-group" data-f-toggle="labels">
+					<h3 class="f-item-heading">Line Length</h3>
+					<div class="f-item-controls">
+					
+						<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+							<svg>
+								<use xlink:href="#f-icon-notes" />
+							</svg>
+					
+						</span>
+						<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+							<svg>
+								<use xlink:href="#f-icon-code" />
+							</svg>
+					
+						</span>
+					</div>				</div><!--[if IE 8]>&nbsp;<![endif]--> <div class="f-item-notes" data-f-toggle="notes">
+	<h4>Best practices</h4>
+<p>Copy length is a legibility issue. When your line of copy is too long, your eye tires and it makes it hard to read.</p>
+<p>Aim to keep your line length around 45-75 characters, with an optimal length of around 66 (this includes spaces).</p>
+<p>Our CSS limits a <code>&lt;p&gt;</code> line length to 60em.</p>
+<p><img src="http://4com.corp.ti.com/ims/style_guide_pattern_library/screenshots-for-guide/linelength-bad-2.png" alt="Poor line length example">
+<img src="http://4com.corp.ti.com/ims/style_guide_pattern_library/screenshots-for-guide/linelength-good.png" alt="Good line length esxample"></p>
+<h4>Want to learn more?</h4>
+<p>The quinessential read on typography:
+<a href="http://typographica.org/typography-books/the-elements-of-typographic-style-4th-edition/">Robert Bringhurst's The Elements of Typographic Style</a>
+(web version: <a href="http://webtypography.net/">http://webtypography.net/</a>)</p>
+
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+<div class="f-item-preview">
+	
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup"></code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+			</div>
+
+
+
+</div>
+
+
+<div class="f-item-group" id="06-layout">
+
+
+
+		<div class="c12 f-sectionHeader">
+				<p class="sctnHdr">06 Layout</p>
+		</div>
+	
+	<!--For the Heading Documentation File of each section-->
+
+
+
+
+			<div class="f-item-group" id="06-layout.!overview">
+				
+					
+				
+						<div class="f-item-preview">
+							
+						</div>
+							<div class="row">
+								<div class="c12 f-divider">
+								</div>
+							</div>
+			</div>
+	<!-- //for the Heading Documentation File of each section-->
+
+
+			<div class="f-item-group" id="06-layout.the-grid">
+				<div class="f-item-heading-group" data-f-toggle="labels">
+					<h3 class="f-item-heading">The Grid</h3>
+					<div class="f-item-controls">
+					
+						
+						<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+							<svg>
+								<use xlink:href="#f-icon-code" />
+							</svg>
+					
+						</span>
+					</div>				</div><!--[if IE 8]>&nbsp;<![endif]--> 
+<div class="f-item-preview">
+	<div class="f-item-group">
+	<p>The grid we are using is based on <a href="http://gridiculo.us/grid.html">gridiculo.us</a>.</p>
+	<h5>Key Features</h5>
+	<ul>
+		<li>12 col grid system</li>
+		<li>Allows for nested grids</li>
+		<li>Responsive</li>
+	</ul>
+	<h5>Basic structures</h5>
+	<ul>
+		<li>Each row is defined using class="row"</li>
+		<li>Each column is defined by using <code>class="c{size of column}"</code> where {size of column}=1, 2, 3, … 12.</li>
+	</ul>
+
+	<h5>Why 12?</h5>
+	<p>12 is a common grid system because it can divide in different ways. For example:</p>
+	<p>12 = 6 + 6 = a 2 column layout</p>
+	<p>12 = 4 + 4 + 4 = a 3 column layout</p>
+	<p>12 = 3 + 3 + 3 + 3 = a 4 column layout</p>
+	<p>12 = 8 + 4 = a main content area with side bar</p>
+	<p>etc.</p>
+
+	<h4>Live view of our 12 column grid:</h4>
+	<div class="row">
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+		<div class="c1">
+			<div class="stack level3">1 col</div>
+		</div>
+		<!-- end 1 column -->
+
+	</div>
+
+	<h4>A visual application of the grid on a page layout:</h4>
+
+
+	<div class="row">
+		<div class="c4">
+			<img src="assets/images/theGRID-1.jpg"> General page layout
+		</div>
+		<div class="c4">
+			<img src="assets/images/theGRID-2.jpg"> Structure of the page within the 12 column grid system
+		</div>
+		<div class="c4">
+			<img src="assets/images/theGRID-3.jpg"> The layout broken down in our grid classes
+		</div>
+	</div>
+
+</div>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;f-item-group&quot;&gt;
+	&lt;p&gt;The grid we are using is based on &lt;a href=&quot;http://gridiculo.us/grid.html&quot;&gt;gridiculo.us&lt;/a&gt;.&lt;/p&gt;
+	&lt;h5&gt;Key Features&lt;/h5&gt;
+	&lt;ul&gt;
+		&lt;li&gt;12 col grid system&lt;/li&gt;
+		&lt;li&gt;Allows for nested grids&lt;/li&gt;
+		&lt;li&gt;Responsive&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;h5&gt;Basic structures&lt;/h5&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Each row is defined using class=&quot;row&quot;&lt;/li&gt;
+		&lt;li&gt;Each column is defined by using &lt;code&gt;class=&quot;c{size of column}&quot;&lt;/code&gt; where {size of column}=1, 2, 3, … 12.&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;h5&gt;Why 12?&lt;/h5&gt;
+	&lt;p&gt;12 is a common grid system because it can divide in different ways. For example:&lt;/p&gt;
+	&lt;p&gt;12 = 6 + 6 = a 2 column layout&lt;/p&gt;
+	&lt;p&gt;12 = 4 + 4 + 4 = a 3 column layout&lt;/p&gt;
+	&lt;p&gt;12 = 3 + 3 + 3 + 3 = a 4 column layout&lt;/p&gt;
+	&lt;p&gt;12 = 8 + 4 = a main content area with side bar&lt;/p&gt;
+	&lt;p&gt;etc.&lt;/p&gt;
+
+	&lt;h4&gt;Live view of our 12 column grid:&lt;/h4&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+		&lt;div class=&quot;c1&quot;&gt;
+			&lt;div class=&quot;stack level3&quot;&gt;1 col&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- end 1 column --&gt;
+
+	&lt;/div&gt;
+
+	&lt;h4&gt;A visual application of the grid on a page layout:&lt;/h4&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;c4&quot;&gt;
+			&lt;img src=&quot;assets/images/theGRID-1.jpg&quot;&gt; General page layout
+		&lt;/div&gt;
+		&lt;div class=&quot;c4&quot;&gt;
+			&lt;img src=&quot;assets/images/theGRID-2.jpg&quot;&gt; Structure of the page within the 12 column grid system
+		&lt;/div&gt;
+		&lt;div class=&quot;c4&quot;&gt;
+			&lt;img src=&quot;assets/images/theGRID-3.jpg&quot;&gt; The layout broken down in our grid classes
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+			</div>
+
+
+
+</div>
+
+
+<div class="f-item-group" id="07-images-and-graphics">
+
+
+
+		<div class="c12 f-sectionHeader">
+				<p class="sctnHdr">07 Images And Graphics</p>
+		</div>
+	
+	<!--For the Heading Documentation File of each section-->
+
+
+
+
+			<div class="f-item-group" id="07-images-and-graphics.placeholder">
+				
+					
+						<div class="f-item-heading-group" data-f-toggle="labels">
+						<h3 class="f-item-heading">Placeholder</h3>
+						<div class="f-item-controls">
+						
+							<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+								<svg>
+									<use xlink:href="#f-icon-notes" />
+								</svg>
+						
+							</span>
+							<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+								<svg>
+									<use xlink:href="#f-icon-code" />
+								</svg>
+						
+							</span>
+						</div>				
+						</div><div class="f-item-notes" data-f-toggle="notes">
+	<h3>Placeholder</h3>
+<p>Feel free to email questions or comments to the Pattern Library development team: <a href="mailto:webtech-pattern-team@list.ti.com">webtech-pattern-team@list.ti.com</a></p>
+
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+<div class="f-item-preview">
+	
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup"></code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+			</div>
+	<!-- //for the Heading Documentation File of each section-->
+
+
+
+
+</div>
+
+
+<div class="f-item-group" id="08-motion">
+
+
+
+		<div class="c12 f-sectionHeader">
+				<p class="sctnHdr">08 Motion</p>
+		</div>
+	
+	<!--For the Heading Documentation File of each section-->
+
+
+
+
+			<div class="f-item-group" id="08-motion.placeholder">
+				
+					
+						<div class="f-item-heading-group" data-f-toggle="labels">
+						<h3 class="f-item-heading">Placeholder</h3>
+						<div class="f-item-controls">
+						
+							<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+								<svg>
+									<use xlink:href="#f-icon-notes" />
+								</svg>
+						
+							</span>
+							<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+								<svg>
+									<use xlink:href="#f-icon-code" />
+								</svg>
+						
+							</span>
+						</div>				
+						</div><div class="f-item-notes" data-f-toggle="notes">
+	<h3>Placeholder</h3>
+<p>Feel free to email questions or comments to the Pattern Library development team: <a href="mailto:webtech-pattern-team@list.ti.com">webtech-pattern-team@list.ti.com</a></p>
+
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+<div class="f-item-preview">
+	
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup"></code></pre>
+</div><!--[if IE 8]>&nbsp;<![endif]-->
+
+<!-- &nbsp; is for ie8 to fix the margins -->
+			</div>
+	<!-- //for the Heading Documentation File of each section-->
+
+
+
+
+</div>
+
+
+
+
+
+
+
+		</div>
+	<!--[if !IE 8]><!-->
+				<script src="assets/fabricator/scripts/f.js"></script>
+	<!--<![endif]-->
+
+	<!-- toolkit scripts -->
+	<script src="assets/toolkit/scripts/toolkit.js"></script>
+	<!-- /toolkit scripts -->
+
+
+</body>
+</html>
+
+
